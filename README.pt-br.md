@@ -1,3 +1,6 @@
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/marconvtr/tft-webserver/blob/main/README.md)
+[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](https://github.com/marconvtr/tft-webserver/blob/main/README.pt-br.md)
+
 ## WIP: ESP32 ILI9341 Webserver Experiment
 
 Este é apenas um projeto experimental para ver os limites de um ESP32, tem como intuito colocar um série de rotinas e protocolos
