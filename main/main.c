@@ -13,8 +13,15 @@
 #include "esp_system.h"
 #include "esp_spi_flash.h"
 
+#include "mqtt_client_task.h"
+#include "webserver_task.h"
+#include "display_task.h"
 
 void app_main(void)
 {
     printf("Hello beautiful world!\n");
+    xTaskCreate(&mqtt_task, "mqtt_task", 2048, NULL, 5, NULL);
+    xTaskCreatePinnedToCore(display_task, "gui", 4096*2, NULL, 0, NULL, 1);
+
+
 }

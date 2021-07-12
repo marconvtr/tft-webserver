@@ -1,0 +1,1 @@
+set(COMPONENT_ADD_INCLUDEDIRS "display" "mqtt_client" "webserver")
