@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "display_task.h"
+#include "display_task.hpp"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_freertos_hooks.h"
@@ -45,7 +45,7 @@ void display_task(void * args){
     /* Initialize SPI or I2C bus used by the drivers */
     lvgl_driver_init();
 
-    lv_color_t* buf1 = heap_caps_malloc(DISP_BUF_SIZE * sizeof(lv_color_t), MALLOC_CAP_DMA);
+    lv_color_t* buf1 = (lv_color_t*)heap_caps_malloc(DISP_BUF_SIZE * sizeof(lv_color_t), MALLOC_CAP_DMA);
     assert(buf1 != NULL);
 
     /* Use double buffered when not working with monochrome displays */

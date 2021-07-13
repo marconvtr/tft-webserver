@@ -1,5 +1,5 @@
 
-#include "mqtt_client_task.h"
+#include "mqtt_client_task.hpp"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 
